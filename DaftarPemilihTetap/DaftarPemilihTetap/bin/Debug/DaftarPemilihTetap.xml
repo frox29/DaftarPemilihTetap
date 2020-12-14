@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DaftarPemilihTetap</name>
+    </assembly>
+    <members>
+        <member name="T:DaftarPemilihTetap.admin">
+            <summary>
+            ini class Admin untuk mengelola bisnis proses pada login admin
+            </summary>
+            <remarks>
+            <para>Class ini hanya menerima inputan dan mengecek inputan pada database</para>
+            </remarks>
+        </member>
+        <member name="M:DaftarPemilihTetap.admin.login(System.String,System.String,System.Windows.Forms.Form)">
+            <summary>
+            method ini digunakan untuk memvalidasi username dan password pada saat login ke aplikasi, dengan memasukan 2 input string dan 1 form
+            apabila data yang dimasukan kosong, maka akan keluar pesan "silahkan masukan username dan password, jika yang dimasukan salah maka akan keluar username dan password yang anda masukan salan
+            </summary>
+            <param name="user">tipe data string</param>
+            <param name="pass">tipe data string</param>
+            <param name="fm">tipe data form</param>
+            <example>
+            <code>
+            admin ad = new admin();
+            ad.login(user, pass, this);
+            </code>
+            </example>
+        </member>
+        <member name="T:DaftarPemilihTetap.Pemilih">
+            <summary>
+            Ini kelas pemilih digunakan untuk menampilkan tampilan dari form pemilih dan turunan dari kelas Form
+            </summary>
+            <remarks>
+            <para>
+            kelas ini berisikan pemanggilan method dari pemilih_crud class, untuk di tampilkan outputnya dan juga berisikan
+            perubahan variabel dari tool - tool pada toolbox untuk mengurangi bug pada saat digunakan
+            </para>
+            </remarks>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.#ctor">
+            <summary>
+            method ini merupakan method main pada saat form pemilih di tampilkan, yang berisikan pengubahan varibel enabled supaya mengurangi bug pada saat digunakan
+            </summary>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.Center(System.Windows.Forms.Form)">
+            <summary>
+            method ini digunakan untuk memposikan Form pemilih pada posisi tengah dari layar device
+            </summary>
+            <param name="form"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.RefreshForm">
+            <summary>
+            method ini digunakan untuk menyegarkan tampilan form penambahan pemilih supaya menjadi kosong / baru lagi
+            </summary>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            method ini di gunakan untuk memanggil method create pada kelas pemilih_crud dan mengisikan paramater dengan
+            textbox, combobox yang ada tampilan pemilih
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.btnDelete_Click(System.Object,System.EventArgs)">
+            <summary>
+            method ini di gunakan untuk memanggil method delete pada kelas pemilih_crud dan mengisikan paramater dengan
+            textbox, combobox yang ada tampilan pemilih
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.txNik_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            method ini digunakan untuk menjadikan textbox nik hanya dibisa di isi dengan angka saja
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.txHp_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            method ini digunakan untuk menjadikan textbox nik hanya dibisa di isi dengan angka saja
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.btnEdit_Click(System.Object,System.EventArgs)">
+            <summary>
+            method ini di gunakan untuk memanggil method create pada kelas pemilih_crud dan mengisikan paramater dengan
+            textbox, combobox yang ada tampilan pemilih
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.btnRefresh_Click(System.Object,System.EventArgs)">
+            <summary>
+            method ini berfungsi ketika tombol refresh di tekan dan berguna untuk merubah tampilan textbox dan combobox pada tampilan supaya kembali seperti semula
+            sebelum cell pada table di klik
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.txSearch_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            method ini di gunakan untuk memanggil method search pada kelas pemilih_crud dan mengisikan paramater dengan
+            textbox pada kolom cari yang ada tampilan pemilih
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.dataGridView1_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            method ini digunakan untuk memindahkan data pada cell tabel ke textbox dan combo box pada tampilan pemilih,
+            hal ini digunakan untuk mengedit, atau menghapus data pemilih
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.pictureBox2_Click(System.Object,System.EventArgs)">
+            <summary>
+            method ini digunakan ketika gambar 'kembali' di klik maka akan kembali ke menu awal
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.txNik_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            thod ini di gunakan untuk memanggil method valid_nik pada kelas pemilih_crud dan mengisikan paramater dengan
+            textbox pada nik yang ada tampilan pemilih
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:DaftarPemilihTetap.Pemilih.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DaftarPemilihTetap.Login.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DaftarPemilihTetap.Login.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Login.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:DaftarPemilihTetap.Home.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DaftarPemilihTetap.Home.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Home.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DaftarPemilihTetap.Pemilih_Crud">
+            <summary>
+            Ini adalah class Pemilih, digunkan untuk mengolah data pemilih pada aplikasi ini
+            </summary>
+            <remarks>
+            <para>
+            Digunakan untuk Create, Read, Update, Delete, Search data pemilih
+            </para>
+            <para>
+            Digunakan untuk mengisi Combobox supaya tidak data yang dimasukan sesuai yang terdapat pada database, dan memvalidasi NIK apakah sudah ada yang menggunkan apa belum
+            </para>
+            </remarks>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih_Crud.Read(System.Windows.Forms.DataGridView)">
+            <summary>
+            Method ini digunakan untuk menampilkan tabel pemilih adari database pemilih dengan ascendeing pada menu pemilih
+            </summary>
+            <param name="dg">tipe data datagridview</param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih_Crud.create(System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.ComboBox,System.Windows.Forms.ComboBox,System.Windows.Forms.ComboBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.Button,System.Windows.Forms.DataGridView)">
+            <summary>
+            Method ini di gunakan untuk menambhakan data pemilih ke database dan setelah sukses menambahkan akan langsung
+            mengupdate data table pemilih
+            </summary>
+            <param name="txNik">tipe data TextBox</param>
+            <param name="txNama">tipe data Textbox</param>
+            <param name="cbStatus">tipe data Combobox</param>
+            <param name="cbTps">tipe data Combobox</param>
+            <param name="cbJk">tipe data Combobox</param>
+            <param name="txAlamat">tipe data Textbox</param>
+            <param name="txHp">tipe data Textbox</param>
+            <param name="btnTambah">tipe data Button</param>
+            <param name="dg">tipe data datagridview</param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Pemilih_Crud.update(System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.ComboBox,System.Windows.Forms.ComboBox,System.Windows.Forms.ComboBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.Windows.Forms.DataGridView,System.Windows.Forms.Button,System.Windows.Forms.Button,System.Windows.Forms.Button)">
+            <summary>
+            Methode ini berfungsi untuk mengupdate data pemilih berdasarkan nim
+            </summary>
+            <param name="txNik">tipe data TextBox</param>
+            <param name="txNama">tipe data TextBox</param>
+            <param name="cbStatus">tipe data ComboBox</param>
+            <param name="cbTps">tipe data ComboBox</param>
+            <param name="cbJk">tipe data ComboBox</param>
+            <param name="txAlamat">tipe data TextBox</param>
+            <param name="txHp">tipe data TextBox</param>
+            <param name="dg">tipe data DataGridView</param>
+            <param name="btnDelete">tipe data button</param>
+            <param name="btnEdit">tipe data button</param>
+            <param name="btnTambah">tipe data button</param>
+        </member>
+        <member name="M:DaftarPemilihTetap.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:DaftarPemilihTetap.TPS.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DaftarPemilihTetap.TPS.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DaftarPemilihTetap.TPS.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DaftarPemilihTetap.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.building">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.exit">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.kpu">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.logout">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DaftarPemilihTetap.Properties.Resources.process__1_">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>
